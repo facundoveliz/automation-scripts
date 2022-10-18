@@ -29,7 +29,7 @@ dotenv.config({ path: "./.env" });
   await page
     .waitForSelector(
       "#listDepartAll > div > button.btn.w-100.btn-danger.btn-xs > span.glyphicons.glyphicons-plane",
-      { visible: true }
+      { visible: true, timeout: 300000 }
     )
     .then(async () => {
       await page.click(
