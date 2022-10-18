@@ -1,0 +1,14 @@
+[
+  {
+    "domain": "www.airlinemanager.com",
+    "hostOnly": true,
+    "httpOnly": false,
+    "name": "PHPSESSID",
+    "path": "/",
+    "sameSite": null,
+    "secure": false,
+    "session": true,
+    "storeId": null,
+    "value": "9kh9u8h7m1lvuep1q9htk5qik5"
+  }
+]
