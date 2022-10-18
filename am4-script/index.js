@@ -32,6 +32,7 @@ dotenv.config({ path: "./.env" });
       { visible: true, timeout: 300000 }
     )
     .then(async () => {
+      await page.waitForTimeout(2000);
       await page.click(
         "#listDepartAll > div > button.btn.w-100.btn-danger.btn-xs > span.glyphicons.glyphicons-plane"
       );
