@@ -1,13 +1,13 @@
 import puppeteerExtra from "puppeteer-extra";
 import stealthPlugin from "puppeteer-extra-plugin-stealth";
-import cron from "node-cron";
 import dotenv from "dotenv";
 
 dotenv.config({ path: "./.env" });
 
-cron.schedule("*/2 * * * *", async () => {
+(async () => {
   puppeteerExtra.use(stealthPlugin());
   const browser = await puppeteerExtra.launch({
+    headless: false,
     userDataDir: "./user_data",
   });
   const page = await browser.newPage();
@@ -38,5 +38,7 @@ cron.schedule("*/2 * * * *", async () => {
       );
       await page.waitForTimeout(2000);
       browser.close();
-    });
-});
+    })
+    .catch((err) => console.log(err));
+  browser.close();
+})();

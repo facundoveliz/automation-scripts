@@ -1,6 +1,0 @@
-# Netscape HTTP Cookie File
-# http://curl.haxx.se/rfc/cookie_spec.html
-# This is a generated file!  Do not edit.
-
-www.airlinemanager.com	FALSE	/weblogin	FALSE	1697472766	am4Access	c3b5bb5ad6c2662a75098c0d425c7444
-www.airlinemanager.com	FALSE	/	FALSE	0	PHPSESSID	9kh9u8h7m1lvuep1q9htk5qik5
