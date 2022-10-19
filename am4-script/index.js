@@ -1,10 +1,11 @@
 import puppeteerExtra from "puppeteer-extra";
 import stealthPlugin from "puppeteer-extra-plugin-stealth";
+import cron from "node-cron";
 import dotenv from "dotenv";
 
 dotenv.config({ path: "./.env" });
 
-(async () => {
+cron.schedule("*/5 * * * *", async () => {
   puppeteerExtra.use(stealthPlugin());
   const browser = await puppeteerExtra.launch({
     headless: false,
@@ -41,4 +42,4 @@ dotenv.config({ path: "./.env" });
     })
     .catch((err) => console.log(err));
   browser.close();
-})();
+});
