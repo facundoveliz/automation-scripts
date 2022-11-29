@@ -5,7 +5,7 @@ import cron from "node-cron";
 import { exec } from "child_process";
 
 dotenv.config({
-  path: "/home/facu/Documents/Dev/automation-scripts/todoist-notifier/.env",
+  path: "./.env",
 });
 
 cron.schedule("*/30 * * * *", async () => {
